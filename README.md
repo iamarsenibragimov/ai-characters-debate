@@ -1,11 +1,11 @@
+<img width="1121" alt="Screenshot 2025-02-25 at 11 56 16 AM" src="https://github.com/user-attachments/assets/030769ac-ed9f-4d6e-a4b6-95ff8ff80e81" />
+
 ## Inspiration  
 The internet is a 24/7 conversation, constantly generating news, opinions, and debates. Traditional media struggles to keep up, and with its flaws – we've seen the rise and popularity of [Citizen Internet Journalism](https://en.wikipedia.org/wiki/Digital_journalism#Citizen_journalism) providing unfiltered on-the-ground reporting from everyday people.
 
 In the [East](https://www.youtube.com/@JasonLivinginChina) and the [West](https://www.youtube.com/@CashJordan) <br>
 
 Unfortunately, these forms are still flawed – often doing whatever it takes to get views (e.g. fake AI generated provacative cover images)
-
-![Screenshot 2025-02-24 at 9 18 18 AM](https://github.com/user-attachments/assets/b4fc9bd9-b9cc-4769-9cbb-23afa4ac68e5)
 
 AI has the potential to bridge the gaps in traditional and digital journalism. 
 We wanted to build an **AI-powered news show** that captures and contextualizes trending stories in **real time**, bringing fresh, AI-generated commentary to the digital world.  
