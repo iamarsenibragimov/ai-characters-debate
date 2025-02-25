@@ -1,7 +1,6 @@
 ## Inspiration  
 The internet is a 24/7 conversation, constantly generating news, opinions, and debates. Traditional media struggles to keep up, and with its flaws – we've seen the rise and popularity of [Citizen Internet Journalism](https://en.wikipedia.org/wiki/Digital_journalism#Citizen_journalism) providing unfiltered on-the-ground reporting from everyday people.
 
-
 In the [East](https://www.youtube.com/@JasonLivinginChina) and the [West](https://www.youtube.com/@CashJordan) <br>
 
 Unfortunately, these forms are still flawed – often doing whatever it takes to get views (e.g. fake AI generated provacative cover images)

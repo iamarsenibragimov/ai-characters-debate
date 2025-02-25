@@ -20,7 +20,8 @@ async function populateNewsDatabase() {
     console.log('Filtering and analyzing stories...')
     const filteredStories = await filterStories(stories, {
       minRelevanceScore: 7,
-      maxStories: 100
+      maxStories: 100,
+      skipAnalytics: true
     })
 
     // Read existing content if file exists

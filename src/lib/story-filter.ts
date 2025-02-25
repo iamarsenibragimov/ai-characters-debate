@@ -51,7 +51,7 @@ Comments: ${story.commentCount}
     });
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o',
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: RELEVANCE_SYSTEM_PROMPT },
         { role: 'user', content: storyContent }

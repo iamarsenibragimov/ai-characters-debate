@@ -23,7 +23,7 @@ app.use('/api/text-to-speech', textToSpeechRouter);
 // Add news API endpoint
 app.get('/api/news', async (_req: express.Request, res: express.Response): Promise<void> => {
     try {
-        const csvPath = path.join(process.cwd(), '', 'news_database.csv');
+        const csvPath = path.join(process.cwd(), 'public', 'news_database.csv');
 
         if (!fs.existsSync(csvPath)) {
             res.status(404).json({

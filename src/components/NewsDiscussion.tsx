@@ -28,21 +28,41 @@ const NewsDiscussion = ({
   useEffect(() => {
     if (!topic) return;
 
+    console.log('Topic changed:', {
+      originalTopic: topic,
+      length: topic.length
+    });
+
     setIsTyping(true);
     setDisplayedTopic('');
 
     const truncatedTopic = topic.length > 128 ? topic.substring(0, 128) + '...' : topic;
+    console.log('Truncated topic:', {
+      truncatedTopic,
+      length: truncatedTopic.length
+    });
+
     let currentIndex = 0;
 
     const typingInterval = setInterval(() => {
       if (currentIndex < truncatedTopic.length) {
-        setDisplayedTopic(prev => prev + truncatedTopic[currentIndex]);
+        const nextChar = truncatedTopic[currentIndex];
+        console.log('Typing character:', {
+          index: currentIndex,
+          char: nextChar,
+          currentText: displayedTopic + nextChar
+        });
+        setDisplayedTopic(prev => prev + nextChar);
         currentIndex++;
       } else {
+        console.log('Finished typing:', {
+          finalText: displayedTopic,
+          length: displayedTopic.length
+        });
         clearInterval(typingInterval);
         setIsTyping(false);
       }
-    }, 30); // Adjust typing speed here (milliseconds)
+    }, 30);
 
     return () => clearInterval(typingInterval);
   }, [topic]);
@@ -50,7 +70,7 @@ const NewsDiscussion = ({
   if (!characters.length || !topic) {
     return (
       <div className="flex h-screen items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+        <Loader2 data-testid="loading-spinner" className="h-8 w-8 animate-spin text-muted-foreground" />
       </div>
     );
   }
@@ -89,7 +109,7 @@ const NewsDiscussion = ({
                 <div className="bg-red-600 text-white px-3 py-1 font-bold text-sm">
                   LIVE
                 </div>
-                <h2 className="text-4xl font-bold uppercase tracking-wide text-white typing-text">
+                <h2 data-testid="topic-heading" className="text-4xl font-bold uppercase tracking-wide text-white typing-text">
                   {displayedTopic}
                   {isTyping && <span className="typing-animation" />}
                 </h2>

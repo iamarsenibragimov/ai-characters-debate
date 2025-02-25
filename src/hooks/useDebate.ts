@@ -162,27 +162,14 @@ export const useDebate = () => {
 
   const getNewTopic = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/news', {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const news = await newsQueue.getCurrentNews();
+      if (!news) {
+        throw new Error('No news available');
       }
-
-      const data = await response.json();
-
-      if (!data || !data.title) {
-        throw new Error('Invalid response format');
-      }
-
-      console.log('New topic:', data.title);
-
-      setCurrentNews(data);
-      return data.title;
+      
+      console.log('New topic:', news.title);
+      setCurrentNews(news);
+      return news.title;
     } catch (error) {
       console.error('Error getting new topic:', error);
       toast({
