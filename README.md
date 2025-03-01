@@ -5,7 +5,9 @@ The internet is a 24/7 conversation, constantly generating news, opinions, and d
 
 In the [East](https://www.youtube.com/@JasonLivinginChina) and the [West](https://www.youtube.com/@CashJordan) <br>
 
-Unfortunately, these forms are still flawed – often doing whatever it takes to get views (e.g. fake AI generated provacative cover images)
+Unfortunately, these forms are still flawed – often doing whatever it takes to get views (e.g. fake AI generated provacative cover images) <br>
+![Screenshot 2025-02-24 at 9 18 18 AM](https://github.com/user-attachments/assets/22410432-fee9-4b33-b861-2d1b3ef8c205)
+
 
 AI has the potential to bridge the gaps in traditional and digital journalism. 
 We wanted to build an **AI-powered news show** that captures and contextualizes trending stories in **real time**, bringing fresh, AI-generated commentary to the digital world.  
@@ -16,12 +18,14 @@ We wanted to build an **AI-powered news show** that captures and contextualizes 
 Inspired by the chaotic, unfiltered discussions happening online, **A Bot’s Take** was born: a news show where AI-powered anchors analyze, report, and react to the internet’s biggest stories.  
 
 ## What it does  
+<img src="https://github.com/user-attachments/assets/705d54e2-e6cf-435b-8f1c-ed6da45c23c9" alt="a bot's take logo" width="200"/> <br>
+
 **A Bot’s Take** is an AI-driven news show streamed on **Twitch**, featuring **two AI anchors** that deliver commentary and insights on trending stories. Based of the futuristic TV-show Futurama – we have *Linda, a composed and optimistic news anchor*, and *Morbo, an alien calling out any foolishness and future doom of the news covered.*
 
 The show pulls from **Reddit’s front page** to bring in the most discussed content. The anchors' avatars speak with **AI-generated voices from ElevenLabs**, adding personality and flair to the commentary. The show includes an **animated news ticker** at the bottom, keeping the energy fast-paced and engaging, while the **topic headline** updates dynamically. The content is fully automated, with real-time updates and minimal human intervention.
 
 ## How we built it  
-![design diagram fixed](https://github.com/user-attachments/assets/f1e492f9-7f48-4635-bfe9-641236e55878)
+![design diagram fixed](https://github.com/user-attachments/assets/887e6392-02ac-43d6-b304-d09233d669d3)
 
 - **Initial development**: We used **Lovable**, a promptable AI full-stack engineer, to generate the initial boilerplate code and the foundational UI for the project.  
 - **Code editing & refinement**: After setting the base, we utilized **Cursor** to fine-tune the codebase and implement more advanced features.  
@@ -35,11 +39,11 @@ The show pulls from **Reddit’s front page** to bring in the most discussed con
 ## Challenges we ran into  
 - **3 Project Pivots**: Simultaneously we tried an [AI Podcast Show](https://github.com/justinmae/ai-podcaster-convo), an [AI Podcast Host](https://github.com/iamarsenibragimov/ai-podcaster-experience) where anyone could be a guest, then an AI debating show (current repo initially) before landing on this idea. We'd like to thank **Lovable** for the ability to prototype quickly and pivot without too much pain.
 
-<img src="https://github.com/user-attachments/assets/2383df9c-6005-4650-9655-22f1c416c5ac" alt="loving lovable" width="400"/> <br>
+<img src="https://github.com/user-attachments/assets/d823a034-39f9-4f44-907e-04653765e75c" alt="loving lovable" width="400"/> <br>
 
 - **Balancing Unfiltered Expression, Unwarranted Bias, and Lack of Context**: Sometimes the anchor (Morbo) gives comments lacking in context. We found our Reddit scrape could sometimes miss the full context behind topics and hence, lead to a shallow reporting. <br> e.g. Image of an anchor's comment. Zenlensky was recently offering to resign to seal Ukraine's NATO membership. However, Morbo's comment in isolation is not a fair view, and could lead to listeners missing the full picture. 
 
-<img src="https://github.com/user-attachments/assets/1a758f17-60a2-4177-b252-011ff623698f" alt="Zenlensky comment" width="900"/> <br>
+<img src="https://github.com/user-attachments/assets/ad2b5772-9028-4a95-aadd-8dd1467c2da2" alt="Zenlensky comment" width="900"/> <br>
 
 
 - **Ensuring relevance & filtering noise**: Not all trending Reddit posts are suitable for the show. We used OpenAI to provide intelligence in filtering out NSFW content, then scrape the top 50 posts and rank by newsworthiness – picking the top 10 to report on.
